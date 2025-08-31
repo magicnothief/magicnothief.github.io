@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Magic No Thief</title>
-  <meta name="description" content="Welcome to MagicNoThief.hu." />
+  <title>MagicNoThief</title>
+  <meta name="description" content="Links to projects and spaces by MagicNoThief." />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <style>
     body {
@@ -13,42 +13,52 @@
       background: linear-gradient(135deg, #1a1a2e, #16213e);
       color: #f1f1f1;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
     header {
-      padding: 5rem 1rem;
+      padding: 4rem 1rem 2rem;
     }
     header h1 {
       font-size: 3rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
       background: linear-gradient(90deg, #ff8c00, #ff2e63);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     header p {
-      font-size: 1.25rem;
+      font-size: 1.1rem;
       max-width: 600px;
       margin: 0 auto 2rem;
+      color: #bbb;
     }
-    .btn {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background: #ff2e63;
-      color: #fff;
-      border-radius: 30px;
+    .links {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 2rem;
+    }
+    .link-card {
+      width: 100%;
+      max-width: 500px;
+      padding: 1rem 2rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
       text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s;
+      color: #fff;
+      font-size: 1.25rem;
+      font-weight: 500;
+      transition: background 0.3s, transform 0.2s;
     }
-    .btn:hover {
-      background: #ff8c00;
-    }
-    section {
-      padding: 4rem 1rem;
-      max-width: 800px;
-      margin: 0 auto;
+    .link-card:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-3px);
     }
     footer {
-      padding: 2rem;
+      padding: 1.5rem;
       font-size: 0.9rem;
       color: #aaa;
     }
@@ -56,16 +66,15 @@
 </head>
 <body>
   <header>
-    <h1>MagicNoThief</h1>
-    <a href="https://magicnothief.hu/pages" class="btn">Pages</a>
+    <h1>Magic No Thief</h1>
+    <p>Projects, creations, and digital spaces — all in one place.</p>
   </header>
 
-  <section id="pages">
-    <h2>About</h2>
-    <p>
-      MagicNoThief.hu is a space for my projects.
-    </p>
-  </section>
+  <main class="links">
+    <a href="https://files.magicnothief.hu/" class="link-card">File server</a>
+    <a href="https://printer.magicnothief.hu/" class="link-card">3D printer</a>
+    <a href="https://skimap.github.io/" class="link-card">Skimap</a>
+  </main>
 
   <footer>
     &copy; <span id="year"></span> MagicNoThief. All rights reserved.
